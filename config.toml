@@ -43,7 +43,7 @@ defaultContentLanguageInSubdir = false
 [params]
   # Color theme.
   #   Choose from `default`, `ocean`, `forest`, `coffee`, `dark`, or `1950s`.
-  color_theme = "default"
+  color_theme = "dark"
 
   # Font style.
   #   Choose from `default`, `classic`, or `playfair`.
@@ -55,14 +55,14 @@ defaultContentLanguageInSubdir = false
 
   # Organizations/Affiliations.
   #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
-  organizations = [ { name = "The Scripps Research Institute", url = "" } ]
+  organizations = [ { name = "The Scripps Research Institute", url = "http://scripps.edu" } ]
 
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
   avatar = "portrait.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
   email = "radus@scripps.edu"
   address = "San Diego, CA"
   # office_hours = "Monday 10:00 to 13:00 or email for appointment"
-  phone = "858 784 8636"
+  # phone = "858 123 1234"
   # skype = "echo123"
   # telegram = ""
 
@@ -216,12 +216,12 @@ defaultContentLanguageInSubdir = false
 
   [[params.social]]
     icon = "envelope"
-    icon_pack = "fa"
+    icon_pack = "fas"
     link = "mailto:radus@scripps.edu"
 
   [[params.social]]
     icon = "twitter"
-    icon_pack = "fa"
+    icon_pack = "fab"
     link = "//twitter.com/rsuciu"
 
   [[params.social]]
@@ -231,7 +231,7 @@ defaultContentLanguageInSubdir = false
 
   [[params.social]]
     icon = "github"
-    icon_pack = "fa"
+    icon_pack = "fab"
     link = "//github.com/radusuciu"
 
 
@@ -243,25 +243,25 @@ defaultContentLanguageInSubdir = false
   # Align the main menu to the right of the page? (true/false)
   align_right = true
 
-[[menu.main]]
-  name = "Home"
-  url = "#about"
-  weight = 1
+# [[menu.main]]
+#   name = "Home"
+#   url = "#about"
+#   weight = 1
 
-[[menu.main]]
-  name = "Publications"
-  url = "#publications_selected"
-  weight = 2
+# [[menu.main]]
+#   name = "Publications"
+#   url = "#publications_selected"
+#   weight = 2
 
-[[menu.main]]
-  name = "Posts"
-  url = "#posts"
-  weight = 3
+# [[menu.main]]
+#   name = "Posts"
+#   url = "#posts"
+#   weight = 3
 
-[[menu.main]]
-  name = "Contact"
-  url = "#contact"
-  weight = 4
+# [[menu.main]]
+#   name = "Contact"
+#   url = "#contact"
+#   weight = 4
 
 # Taxonomies.
 [taxonomies]

@@ -15,19 +15,17 @@ weight = 5
   ]
 
 # List your qualifications (such as academic degrees).
-[[education.courses]]
-  course = "PhD in Chemical Biology"
-  institution = "The Scripps Research Institute"
-  year = "ongoing"
+# [[education.courses]]
+#   course = "PhD in Chemical Biology"
+#   institution = "The Scripps Research Institute"
+#   year = "ongoing"
 
-[[education.courses]]
-  course = "BSc in Chemistry"
-  institution = "McGill University"
-  year = 2012
+# [[education.courses]]
+#   course = "BSc in Chemistry"
+#   institution = "McGill University"
+#   year = 2012
  
 +++
-
-# Biography
 
 Radu Suciu is a graduate student at [TSRI](http://scripps.edu).
 
