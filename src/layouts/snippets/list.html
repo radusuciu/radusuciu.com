@@ -1,3 +1,8 @@
 {{ define "main" }}
-<p>List of snippets</p>
+<h1>Snippets</h1>
+<ul>
+{{ range .Pages }}
+<a href="{{.Permalink}}">{{.Title}}</a>
+{{ end }}
+</ul>
 {{ end }}

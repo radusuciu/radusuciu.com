@@ -1,0 +1,1 @@
+Bits of code and other things that I find useful, mostly for myself.
