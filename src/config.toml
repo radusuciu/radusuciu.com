@@ -2,6 +2,8 @@ title = "Radu Suciu"
 baseURL = "https://radusuciu.com"
 languageCode = "en-us"
 disableKinds = ["taxonomy", "taxonomyTerms", "RSS", "sitemap", "robotsTXT", "404"]
+pygmentsCodeFences = true
+pygmentsUseClasses = true
 
 [params]
     description = "My Personal Website."
