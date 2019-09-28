@@ -2,16 +2,15 @@
 
 <head>
     <title>{{ $.Site.Title }}</title>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="description" content="{{ if .IsHome}}{{ $.Site.Params.Description }}{{ else }}{{ $.Page.Params.Description }}{{ end }}">
     <meta name="keywords" content="Radu Suciu">
     <link href="/main.css" rel="stylesheet">
 </head>
 
 <body>
-    {{ partial "header.html" . }}
-
     <div id="main">
+        {{ partial "header.html" . }}
         {{ block "main" . }} {{ end }}
     </div>
 

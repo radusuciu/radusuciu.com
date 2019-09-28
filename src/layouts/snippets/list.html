@@ -1,8 +1,14 @@
 {{ define "main" }}
 <h1>Snippets</h1>
-<ul>
+
+<p>Bits of code and other things that I find useful, mostly for myself.</p>
+
 {{ range .Pages }}
-<a href="{{.Permalink}}">{{.Title}}</a>
+<div>
+    <a href="{{.Permalink}}">{{.Title}}</a>
+    <p>{{ .Content }}</p>
+    <hr>
+</div>
 {{ end }}
-</ul>
+
 {{ end }}
