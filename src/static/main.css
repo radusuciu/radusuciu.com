@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: white;
+}
+
+img {
+    border: 0;
+}

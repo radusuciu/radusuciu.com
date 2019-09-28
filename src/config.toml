@@ -1,0 +1,7 @@
+title = "Radu Suciu"
+baseURL = "https://radusuciu.com"
+languageCode = "en-us"
+disableKinds = ["taxonomy", "taxonomyTerms", "RSS", "sitemap", "robotsTXT", "404"]
+
+[params]
+    description = "My Personal Website."

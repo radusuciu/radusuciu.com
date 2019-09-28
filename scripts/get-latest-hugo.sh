@@ -18,7 +18,7 @@ main() {
     version="${version#?}"
 
     local url="https://github.com/gohugoio/hugo/releases/download/v${version}/hugo_${version}_Linux-64bit.tar.gz"
-    wget -qO- "${url}" | tar xvz hugo
+    wget -qO- "${url}" | tar xvz -C ./bin/hugo/
 }
 
 main "$@"

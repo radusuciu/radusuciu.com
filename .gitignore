@@ -1,1 +1,2 @@
-hugo
+bin/hugo/hugo
+build/*
