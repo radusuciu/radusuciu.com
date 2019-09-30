@@ -46,6 +46,9 @@ ul {
     a {
         color: #94cfef;
     }
+    ::selection {
+        background-color: #F92672;
+    }
 	body {
         background-color: #242124;
         color: #f9f9f9;
