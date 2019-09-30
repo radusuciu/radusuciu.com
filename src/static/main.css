@@ -46,10 +46,15 @@ ul {
 .snippet-list-item {
     background-color: rgb(240, 240, 240);
     padding:0.5em;
-    padding-bottom:0em;
     margin-bottom:0.5em;
     border-left:5px solid #555;
     display:block;
+}
+
+.snippet-list-item > * {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0.25em;
 }
 
 /* dark mode  */
