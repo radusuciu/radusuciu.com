@@ -4,6 +4,21 @@ languageCode = "en-us"
 disableKinds = ["taxonomy", "taxonomyTerms", "RSS", "sitemap", "robotsTXT", "404"]
 pygmentsCodeFences = true
 pygmentsUseClasses = true
+sectionPagesMenu = "main"
 
 [params]
     description = "My Personal Website."
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    title = "Home"
+    url = "/"
+    weight = -110
+  [[menu.main]]
+    identifier = "snippets"
+    name = "Snippets"
+    title = "Snippets of code"
+    url = "/snippets/"
+    weight = -110
