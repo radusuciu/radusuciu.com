@@ -7,4 +7,3 @@ ssh-copy-id -i ~/.ssh/mykey user@host
 ```
 
 For more information see [here](https://www.ssh.com/ssh/copy-id).
-

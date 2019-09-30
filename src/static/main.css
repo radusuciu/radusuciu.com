@@ -26,6 +26,12 @@ ul {
     padding: 0;
 }
 
+pre {
+    overflow-x: auto;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
 #header a {
     color: #242124;
     text-decoration: none;
