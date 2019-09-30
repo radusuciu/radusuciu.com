@@ -3,6 +3,7 @@
 html, body {
     padding: 0;
     margin: 0;
+    font-family: 'Raleway', sans-serif;
 }
 
 body {
@@ -19,8 +20,10 @@ ul {
 }
 
 #main {
-    width: 960px;
+    min-width: 280px;
+    max-width: 960px;
     margin:0 auto;
-    margin-top: 5em;
+    margin-top: 3em;
+    padding: 1em;
 }
 
