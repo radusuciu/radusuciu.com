@@ -29,6 +29,7 @@ ul {
 #header a {
     color: #242124;
     text-decoration: none;
+    font-size:1.1em;
 }
 
 #header a.active {
