@@ -50,6 +50,17 @@ pre {
     padding: 1em;
 }
 
+.post-title {
+    padding-bottom:0;
+    margin-bottom:0;
+}
+
+.post-date {
+    padding-top:0;
+    margin-top:0;
+    margin-bottom:1.5em;
+}
+
 .snippet-list-item {
     background-color: rgb(240, 240, 240);
     padding:0.5em;

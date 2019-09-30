@@ -5,6 +5,7 @@ disableKinds = ["taxonomy", "taxonomyTerms", "RSS", "sitemap", "robotsTXT", "404
 pygmentsCodeFences = true
 pygmentsUseClasses = true
 sectionPagesMenu = "main"
+enableGitInfo = true
 
 [params]
     description = "My Personal Website."
