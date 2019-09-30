@@ -18,6 +18,12 @@ enableGitInfo = true
     url = "/"
     weight = -110
   [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    title = "Blog-like posts"
+    url = "/posts/"
+    weight = -110
+  [[menu.main]]
     identifier = "snippets"
     name = "Snippets"
     title = "Snippets of code"

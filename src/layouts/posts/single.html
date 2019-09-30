@@ -1,0 +1,11 @@
+{{ define "main" }}
+
+<h1 class="post-title">{{ .Title }}</h1>
+<p class="post-date">{{ .Lastmod.Format "January 2006" }}</p>
+<p>{{ .Content }}</p>
+
+{{ end }}
+
+{{ define "extra_scripts" }}
+{{ partial "simplebar.html"}}
+{{ end }}

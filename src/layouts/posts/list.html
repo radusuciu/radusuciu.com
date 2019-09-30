@@ -1,0 +1,14 @@
+{{ define "main" }}
+<h1>Posts</h1>
+
+{{ range .Pages }}
+<div>
+    <a href="{{ .Permalink }}">{{.Title}}</a>
+    <p>{{ .Summary }}</p>
+</div>
+{{ end }}
+{{ end }}
+
+{{ define "extra_scripts" }}
+{{ partial "simplebar.html"}}
+{{ end }}
