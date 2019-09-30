@@ -3,12 +3,11 @@
 
 <p>Bits of code and other things that I find useful, mostly for myself.</p>
 
+<!-- TODO: link whole element -->
 {{ range .Pages }}
-<div>
-    <a href="{{.Permalink}}">{{.Title}}</a>
+<div class="snippet-list-item">
+    <a href="{{ .Permalink }}">{{.Title}}</a>
     <p>{{ .Content }}</p>
-    <hr>
 </div>
 {{ end }}
-
 {{ end }}

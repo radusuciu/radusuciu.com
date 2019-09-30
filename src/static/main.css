@@ -17,6 +17,10 @@ img {
     border: 0;
 }
 
+a {
+    color: blue;
+}
+
 ul {
     margin: 0;
     padding: 0;
@@ -39,6 +43,14 @@ ul {
     padding: 1em;
 }
 
+.snippet-list-item {
+    background-color: rgb(240, 240, 240);
+    padding:0.5em;
+    padding-bottom:0em;
+    margin-bottom:0.5em;
+    border-left:5px solid #555;
+    display:block;
+}
 
 /* dark mode  */
 @media (prefers-color-scheme: dark) 
@@ -50,7 +62,7 @@ ul {
         background-color: #F92672;
     }
 	body {
-        background-color: #242124;
+        background-color: #1d1b1d;
         color: #f9f9f9;
     }
     
@@ -58,6 +70,9 @@ ul {
         color: #f9f9f9;
     }
 
-    
+    .snippet-list-item {
+        background-color: #292629;
+        border-left-color: #A6E22E;
+    }
 }
 
