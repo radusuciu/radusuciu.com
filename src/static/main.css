@@ -95,16 +95,24 @@ blockquote {
     margin-top:1em;
   }
 
+::selection {
+    background-color: #F92672;
+    color: white;
+}
+
 #header a {
     color: #242124;
     text-decoration: none;
     font-size:1.1em;
+    /* display:inline-block; */
+    padding-right:0.35em;
 }
 
 #header a.active {
     text-decoration: underline;
 }
 
+/* TODO consider making this smaller? maybe 768px? */
 #main {
     min-width: 280px;
     max-width: 960px;
@@ -128,7 +136,7 @@ blockquote {
     background-color: rgb(240, 240, 240);
     padding:0.5em;
     margin-bottom:0.5em;
-    border-left:5px solid #555;
+    border-left:5px solid #A6E22E;
     display:block;
 }
 
@@ -144,9 +152,6 @@ blockquote {
     a {
         color: #94cfef;
     }
-    ::selection {
-        background-color: #F92672;
-    }
 	body {
         background-color: #1d1b1d;
         color: #f9f9f9;
@@ -158,7 +163,6 @@ blockquote {
 
     .snippet-list-item {
         background-color: #292629;
-        border-left-color: #A6E22E;
     }
 }
 
