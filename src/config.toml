@@ -9,6 +9,7 @@ enableGitInfo = true
 
 [params]
     description = "My Personal Website."
+    authorName = "Radu Suciu"
 
 [menu]
   [[menu.main]]
