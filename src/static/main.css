@@ -121,6 +121,10 @@ blockquote {
     padding: 1em;
 }
 
+.recent-posts {
+    list-style:none;
+}
+
 .post-title {
     padding-bottom:0;
     margin-bottom:0;

@@ -1,4 +1,12 @@
 {{ define "main" }}
 <h1>Radu Suciu</h1>
-<p>Just a bare website.</p>
+<p>This website is a work in progress.</p>
+
+<strong>Recent Posts</strong>
+<ul class="recent-posts">
+    {{ range first 10 (where .Site.RegularPages.ByDate.Reverse "Section" "posts" ) }}
+    <li><a href="{{ .Permalink }}">{{ .Params.title }}</a></li>
+    {{ end }}
+</ul>
+
 {{ end }}
