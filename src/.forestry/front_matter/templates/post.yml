@@ -10,3 +10,4 @@ fields:
   label: date
 pages:
 - src/content/posts/live-clone-a-drive-in-ubuntu.md
+- src/content/snippets/mounting-lvm-volume-in-ubuntu-server-18-04.md
