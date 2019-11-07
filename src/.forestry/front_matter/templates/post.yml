@@ -9,5 +9,6 @@ fields:
   name: date
   label: date
 pages:
-- src/content/posts/live-clone-a-drive-in-ubuntu.md
+- src/content/snippets/start-ssh-agent-and-add-key.md
 - src/content/snippets/mounting-lvm-volume-in-ubuntu-server-18-04.md
+- src/content/posts/live-clone-a-drive-in-ubuntu.md
