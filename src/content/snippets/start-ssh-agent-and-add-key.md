@@ -1,6 +1,5 @@
 +++
 date = ""
-draft = true
 title = "Start ssh-agent and add key"
 
 +++
