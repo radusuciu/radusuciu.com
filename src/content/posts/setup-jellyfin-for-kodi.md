@@ -1,7 +1,7 @@
 +++
 date = ""
 draft = true
-title = "Setup Jellyfin for Kodi (Direct Mode)"
+title = "Setup Jellyfin for Kodi with Direct Mode"
 
 +++
 This short post details my Jellyfin for Kodi setup. The information that is readily found through google and in the project docs is a bit overly complicated - at least right now.
