@@ -1,6 +1,5 @@
 +++
 date = 2020-01-11T08:00:00Z
-draft = true
 title = "Setup Jellyfin for Kodi with Native Mode and NFS"
 
 +++
