@@ -9,6 +9,7 @@ fields:
   name: date
   label: date
 pages:
+- src/content/posts/bar-plot-with-individual-points-overlaid.md
 - src/content/posts/live-clone-a-drive-in-ubuntu.md
 - src/content/posts/my-zotero-setup.md
 - src/content/posts/setup-jellyfin-for-kodi.md
