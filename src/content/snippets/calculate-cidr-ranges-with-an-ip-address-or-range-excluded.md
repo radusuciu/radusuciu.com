@@ -8,6 +8,7 @@ Make this Python 3 script and name it `exclude.py` (or whatever you fancy):
 ```python
 from ipaddress import ip_network
 import sys
+
 all_ips = ip_network('0.0.0.0/0')
 arg = ip_network(sys.argv[1])
 print(",".join([str(x) for x in list(all_ips.address_exclude(arg))]))
