@@ -12,6 +12,7 @@ pages:
 - src/content/posts/bar-plot-with-individual-points-overlaid.md
 - src/content/posts/broadcasting-from-traktor-an-alternative-to-the-built-in-broadcasting-function.md
 - src/content/posts/live-clone-a-drive-in-ubuntu.md
+- src/content/posts/my-personal-matplotlib-holy-grail.md
 - src/content/posts/my-zotero-setup.md
 - src/content/posts/setup-jellyfin-for-kodi.md
 - src/content/snippets/calculate-cidr-ranges-with-an-ip-address-or-range-excluded.md
