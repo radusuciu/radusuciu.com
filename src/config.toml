@@ -1,7 +1,7 @@
 title = "Radu Suciu"
 baseURL = "https://radusuciu.com"
 languageCode = "en-us"
-disableKinds = ["taxonomy", "taxonomyTerms", "RSS", "sitemap", "robotsTXT", "404"]
+disableKinds = ["taxonomy", "term", "RSS", "sitemap", "robotsTXT", "404"]
 pygmentsCodeFences = true
 pygmentsUseClasses = true
 sectionPagesMenu = "main"
