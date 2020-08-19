@@ -30,3 +30,9 @@ enableGitInfo = true
     title = "Snippets of code"
     url = "/snippets/"
     weight = -110
+  [[menu.main]]
+    identifier = "software"
+    name = "Software"
+    title = "Awesome software"
+    url = "/software/"
+    weight = -110

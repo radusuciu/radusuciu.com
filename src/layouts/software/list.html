@@ -1,0 +1,17 @@
+{{ define "main" }}
+<h1>Software</h1>
+
+<p>A list of software projects that I really like.</p>
+
+<!-- TODO: link whole element -->
+{{ range .Pages }}
+<div class="snippet-list-item">
+    <a href="{{ .Permalink }}">{{.Title}}</a>
+    <p>{{ .Content }}</p>
+</div>
+{{ end }}
+{{ end }}
+
+{{ define "extra_scripts" }}
+{{ partial "simplebar.html"}}
+{{ end }}
