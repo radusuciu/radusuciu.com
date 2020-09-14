@@ -8,7 +8,9 @@ Maybe this seems a bit antithetical to the idea of vinyl, but I've found myself 
 
 ## Hardware
 
-Although the Raspberry Pi 4 has a audio input/output, it is widely considered to offer subpar sound quality and it is recommended that you use an external soundcard - either USB- or HAT-based (Hardwared Attached on Top). I opted for a HAT since I wanted an all-in one solution. Here are the components I used with prices and purchase links:
+Although the Raspberry Pi 4 has a audio input/output, it is widely considered to offer subpar sound quality and it is recommended that you use an external soundcard - either USB- or HAT-based (Hardwared Attached on Top). I opted for a HAT since I wanted an all-in one solution.
+
+Here are the components I used with prices and purchase links:
 
 - Raspberry Pi 4B (2GB): [$35](https://www.adafruit.com/product/4292)
 - Raspberry Pi Power Supply: [$8](https://www.adafruit.com/product/4298)
