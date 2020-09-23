@@ -4,6 +4,7 @@ draft = true
 title = "Wireless Vinyl"
 
 +++
+
 Maybe this seems a bit antithetical to the idea of vinyl, but I've found myself wanting to listen to a record I had just bought at a time when it would've disruptive to my partner, whose pandemic office is in our living room. My solution was to build a small streaming device using a [Raspeberry Pi][raspi] and [snapcast][snapcast]. I've also been interested in testing snapcast for synchronous multiroom audio (the explicit purpose of this software), and was impressed by how well it worked.
 
 ## Hardware
@@ -30,9 +31,66 @@ Note that a lot of these can be swapped out for equivalent parts. For example, w
 
 ## Software
 
+### Loading the OS
+The first step is to install an OS onto the SD card using an SD card reader plugged into a computer. I installed Ubuntu Server 20.04.1 (64 bit), downloaded from [the Ubuntu website](https://ubuntu.com/download/raspberry-pi), and flashed it onto my SD card using [Rufus](https://rufus.ie/). At this point, I was able to insert the SD card and boot up, and was able to login via SSH using the IP address of the Raspberry Pi listed by my router in the DHCP allocation table and default username/password (both are ubuntu). You can also do this via WiFi by editing the `network-config` file in the `system-boot` partition of the SD card before inserting into the Pi.
+
+### Configuring the HiFiBerry DAC+ ADC Pro
+
+I was initially afraid that information on this would be hard to come by, but luckily HiFiBerry provide [good documentation](https://www.hifiberry.com/docs/software/configuring-linux-3-18-x/), though the specific steps I followed were a bit different, probably due to the fact that I chose to run Ubuntu.
+
+I edited `/boot/firmware/usercfg.txt` as follows:
+
+```
+# Place "config.txt" changes (dtparam, dtoverlay, disable_overscan, etc.) in
+# this file. Please refer to the README file for a description of the various
+# configuration files on the boot partition.
+
+dtparam=audio=off
+force_eeprom_read=0
+dtoverlay=hifiberry-dacplusadcpro
+```
+
+I also created `/etc/asound.conf` as advised in the docs:
+
+```
+pcm.!default {
+  type hw card 0
+}
+ctl.!default {
+  type hw card 0
+}
+```
+
+After a reboot (`sudo reboot -h now`), I was able to list audio input/output devices using the commands: `arecord -l` and `aplay -l`, with levels that could be adjusted using `alsamixer`.
+
+### Getting Snapcast running in Docker
+
+Next, I installed some dependencies as well as `docker` and `docker-compose`:
+
+```bash
+sudo apt-get update && sudo apt-get upgrade
+sudo apt-get -y install alsa-utils build-essential libffi-dev libssl-dev python3-dev git
+
+# note that though this installation method is recommended on the docker docs
+# it's a security risk to pipe anything straight to your shell
+# you may choose to separate these into two steps so you may examine
+# the script before running
+curl -sSL https://get.docker.com | sh
+
+# similar warning with the get-pip.py file used here
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && sudo python3 get-pip.py && rm get-pip.py
+sudo pip3 install docker-compose
+
+git clone git@github.com:radusuciu/pi4snap.git && cd pi4snap
+sudo docker-compose up -d
+```
+
+This uses a custom snapcast image that I made (pretty ineffeciently, but it works for me) - you can use your own, or even forego the docker install if you'd prefer.
 
 
+## Conclusion
 
+Snapcast should now be reachable at `IP_ADDRESS:1780` - you can control as well as stream here thanks to [snapweb](https://github.com/badaix/snapweb). Refer to the [snapcast][snapcast] repository for more information on control and streaming clients.
 
 
 [snapcast]: https://github.com/badaix/snapcast
