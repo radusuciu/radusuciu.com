@@ -173,5 +173,9 @@ blockquote {
     .snippet-list-item {
         background-color: #292629;
     }
+
+    code {
+        background-color: #282a36;
+    }
 }
 
