@@ -10,7 +10,7 @@ Maybe this seems a bit antithetical to the idea of vinyl, but I've found myself 
 
 ## Hardware
 
-Although the Raspberry Pi 4 has a audio input/output, it is widely considered to offer subpar sound quality and it is recommended that you use an external soundcard - either USB- or HAT-based (Hardwared Attached on Top). I opted for a HAT since I wanted an all-in one solution.
+Although the Raspberry Pi 4 has a audio input/output, it is widely considered to offer subpar sound quality and it is recommended that you use an external soundcard - either USB- or HAT-based (Hardware Attached on Top). I opted for a HAT since I wanted an all-in one solution.
 
 Here are the components I used with prices and purchase links:
 
@@ -28,12 +28,12 @@ And a passive audio splitter and cables:
 
 Total cost: ~$200 (+ some shipping costs)
 
-Note that a lot of these can be swapped out for equivalent parts. For example, while I really like the Argon Neo case, I probably would've opted for a [purpose-built case](https://www.hifiberry.com/shop/cases/steel-case-for-hifiberry-dac-pi-4-2/) by HiFiBerry, had one been available for sale at their [US-based online store](https://hifiberry.us/). As it stands, the Argon Neo case leaves the HifiBerry exposed. Additionally, I probably could've opted for the slightly cheaper HiFiBerry DAC+ ADC ($15 cheaper than the Pro), or something like [AudioInjector's Zero soud card](http://www.audioinjector.net/rpi-zero), which is far cheaper, but requires soldering and I was turned off by the fair number of online reviews complaining about the lack of documentation. The Switchcraft SC600 is a bit overkill as well - but I wanted this particular product for other applications as well.
+Note that a lot of these can be swapped out for equivalent parts. For example, while I really like the Argon Neo case, I probably would've opted for a [purpose-built case](https://www.hifiberry.com/shop/cases/steel-case-for-hifiberry-dac-pi-4-2/) by HiFiBerry, had one been available for sale at their [US-based online store](https://hifiberry.us/). As it stands, the Argon Neo case leaves the HifiBerry exposed. Additionally, I probably could've opted for the slightly cheaper HiFiBerry DAC+ ADC ($15 cheaper than the Pro), or something like [AudioInjector's Zero sound card](http://www.audioinjector.net/rpi-zero), which is far cheaper, but requires soldering and I was turned off by the number of online reviews complaining about the lack of documentation. The Switchcraft SC600 is a bit overkill as well - but I wanted it for other applications too.
 
 ## Software
 
 ### Loading the OS
-The first step is to install an OS onto the SD card using an SD card reader plugged into a computer. I installed Ubuntu Server 20.04.1 (64 bit), downloaded from [the Ubuntu website](https://ubuntu.com/download/raspberry-pi), and flashed it onto my SD card using [Rufus](https://rufus.ie/). At this point, I was able to insert the SD card and boot up, and was able to login via SSH using the IP address of the Raspberry Pi listed by my router in the DHCP allocation table and default username/password (both are ubuntu). You can also do this via WiFi by editing the `network-config` file in the `system-boot` partition of the SD card before inserting into the Pi.
+The first step is to install an OS onto the SD card using a SD card reader plugged into a computer. I installed Ubuntu Server 20.04.1 (64 bit), downloaded from [the Ubuntu website](https://ubuntu.com/download/raspberry-pi), and flashed it onto my SD card using [Rufus](https://rufus.ie/). At this point, I was able to insert the SD card and boot up, and was able to login via SSH using the IP address of the Raspberry Pi listed by my router in the DHCP allocation table and default username/password (both are ubuntu). You can also do this via WiFi by editing the `network-config` file in the `system-boot` partition of the SD card before inserting into the Pi.
 
 ### Configuring the HiFiBerry DAC+ ADC Pro
 
