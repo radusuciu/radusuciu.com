@@ -1,10 +1,10 @@
 +++
-date = "2020-09-24"
-title = "Wireless Vinyl with Raspberry Pi"
+date = 2020-09-24T00:00:00Z
 slug = "wireless-vinyl"
-+++
+title = "Wireless Vinyl with Raspberry Pi"
 
-Maybe this seems a bit antithetical to the idea of vinyl, but I've found myself wanting to listen to a record I had just bought at a time when it would've disruptive to my partner, whose pandemic office is in our living room. My solution was to build a small streaming device using a [Raspeberry Pi][raspi] and [snapcast][snapcast]. I've also been interested in testing snapcast for synchronous multiroom audio (the explicit purpose of this software), and was impressed by how well it worked.
++++
+Maybe this seems a bit antithetical to the idea of vinyl, but I've found myself wanting to listen to a record I had just bought at a time when it would've disruptive to my partner, whose pandemic office is in our living room. My solution was to build a small streaming device using a [Raspberry Pi][raspi] and [snapcast][snapcast]. I've also been interested in testing snapcast for synchronous multiroom audio (the explicit purpose of this software), and was impressed by how well it worked.
 
 ![assembled hardware](/images/wireless-vinyl/cropped.jpg)
 
