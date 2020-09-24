@@ -1,7 +1,7 @@
 {{ define "main" }}
 <h1>Posts</h1>
 
-{{ range .Pages.ByLastmod }}
+{{ range .Pages.ByLastmod.Reverse }}
 <div>
     <span>{{ .Lastmod.Format "January 2 2006" }}</span>
     <a href="{{ .Permalink }}">{{ .Title }}</a>
