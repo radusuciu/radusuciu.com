@@ -137,6 +137,10 @@ blockquote {
     margin-bottom:1.5em;
 }
 
+.post-content ul {
+    padding-left: 1.5em;
+}
+
 .snippet-list-item {
     background-color: rgb(240, 240, 240);
     padding:0.5em;
