@@ -106,6 +106,18 @@ echo "alias dc='sudo docker-compose'" >> ~/.bashrc
 source ~/.bashrc
 ```
 
+## WSL2 absolutely murdering my RAM
+
+In the Windows home user directory, create a `.wslconfig` file containing:
+
+```
+[wsl2]
+memory=2GB
+swap=0
+localhostForwarding=true
+```
+
+The last line is unrelated to memory issues and has to do with allowing me to access the container from Windows using `localhost`.
 
 ## Other software used
 
