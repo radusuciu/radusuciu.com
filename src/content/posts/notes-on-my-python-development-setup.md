@@ -6,7 +6,7 @@ title = "Notes on my Python development setup"
 +++
 These are just some notes on my current development setup on Windows 10 WSL2 (Ubuntu 20.04). These days I'm primarily writing code in Python so this post focuses on that. I based this on the excellent [`Hypermodern Python`](https://cjolowicz.github.io/posts/hypermodern-python-01-setup/) setup chapter.
 
-## Setup
+## Python Setup
 
 ### pyenv
 
@@ -53,6 +53,7 @@ I've only recently started using [`poetry`](https://python-poetry.org/) but I'm 
 # !!! WARNING !!!
 # You should inspect the contents of this url before piping into python
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+source $HOME/.poetry/env
 ```
 
 For best compatibility with VSCode, at least at time of writing, it's best to configure it to store virtual environments in the current directory like so:
@@ -99,7 +100,8 @@ You can install AutoHotKey and use [this script](https://gist.github.com/atruski
 Depending on what I'm doing I can end up typing `sudo docker-compose` a lot during a day. Others have more complex workflow, but I just alias `sudo docker-compose` as `dc`:
 
 ```bash
-echo "alias 'sudo docker-compose' dc" >> ~/.bashrc
+echo "alias dc='sudo docker-compose'" >> ~/.bashrc
+source ~/.bashrc
 ```
 
 ## Other software used
