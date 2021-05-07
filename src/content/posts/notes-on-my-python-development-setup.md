@@ -94,6 +94,14 @@ I believe this is built in to later Windows Terminal versions, but I installed W
 
 You can install AutoHotKey and use [this script](https://gist.github.com/atruskie/99a498ac43b91deb91eab4069b6047b9) to launch Windows Terminal with Win + \`.
 
+### Simple docker-compose alias
+
+Depending on what I'm doing I can end up typing `sudo docker-compose` a lot during a day. Others have more complex workflow, but I just alias `sudo docker-compose` as `dc`:
+
+```bash
+echo "alias 'sudo docker-compose' dc" >> ~/.bashrc
+```
+
 ## Other software used
 
 - [VSCode](https://code.visualstudio.com/) (+ Python, Docker, and Remote extensions)
