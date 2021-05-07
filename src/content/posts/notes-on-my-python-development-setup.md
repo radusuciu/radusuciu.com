@@ -95,7 +95,9 @@ I believe this is built in to later Windows Terminal versions, but I installed W
 
 You can install AutoHotKey and use [this script](https://gist.github.com/atruskie/99a498ac43b91deb91eab4069b6047b9) to launch Windows Terminal with Win + \`.
 
-### Simple docker-compose alias
+### Aliases
+
+#### docker-compose
 
 Depending on what I'm doing I can end up typing `sudo docker-compose` a lot during a day. Others have more complex workflow, but I just alias `sudo docker-compose` as `dc`:
 
@@ -104,8 +106,12 @@ echo "alias dc='sudo docker-compose'" >> ~/.bashrc
 source ~/.bashrc
 ```
 
+
 ## Other software used
 
 - [VSCode](https://code.visualstudio.com/) (+ Python, Docker, and Remote extensions)
-- [`gh`](https://github.com/cli/cli). A CLI tool for GitHub
+- [`gh`](https://github.com/cli/cli). A CLI tool for GitHub, installed in WSL2
 - [`scoop`](https://scoop.sh/). I use scoop to install everything I can.
+
+### Packages from apt
+- unzip
