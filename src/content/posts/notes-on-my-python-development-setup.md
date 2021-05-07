@@ -84,7 +84,7 @@ I found that somehow my `/etc/resolv.conf` was overwritten anyway, with a link, 
 
 ### Setting Windows Terminal to open with Linux home directory
 
-By default Windows Terminal opens WSL to the Windows home directory. To use the Linux home directory instead, I went to the Windows Terminal settings for the WSL profile, and changed the starting directory to `"//wsl$/Ubuntu-20.04/home/radu/"`. See [this issue](https://github.com/microsoft/terminal/issues/2743) for more details.
+By default Windows Terminal opens WSL to the Windows home directory. To use the Linux home directory instead, I went to the Windows Terminal settings for the WSL profile, and changed the starting directory to `//wsl$/Ubuntu-20.04/home/radu/`. See [this issue](https://github.com/microsoft/terminal/issues/2743) for more details.
 
 ## Other software used
 
