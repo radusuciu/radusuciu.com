@@ -14,6 +14,7 @@ pages:
 - src/content/posts/live-clone-a-drive-in-ubuntu.md
 - src/content/posts/my-personal-matplotlib-holy-grail.md
 - src/content/posts/my-zotero-setup.md
+- src/content/posts/notes-on-my-python-development-setup.md
 - src/content/posts/setup-jellyfin-for-kodi.md
 - src/content/posts/wireless-vinyl.md
 - src/content/snippets/autoreload-changes-to-python-files-when-working-in-vscode-s-interactive-window.md
