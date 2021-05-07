@@ -86,7 +86,16 @@ I found that somehow my `/etc/resolv.conf` was overwritten anyway, with a link, 
 
 By default Windows Terminal opens WSL to the Windows home directory. To use the Linux home directory instead, I went to the Windows Terminal settings for the WSL profile, and changed the starting directory to `//wsl$/Ubuntu-20.04/home/radu/`. See [this issue](https://github.com/microsoft/terminal/issues/2743) for more details.
 
+### Adding "Windows Terminal here" to right-click context menu
+
+I believe this is built in to later Windows Terminal versions, but I installed Windows Terminal using `scoop` (which you might do if the Microsoft Store is disabled), and this didn't come built in. However, you can still get this functionality using this script: https://github.com/grimux/windowsterminal-shell-scoop. Note that the script requires Powershell 7, which you can also install using scoop (`scoop install pwsh`).
+
+### Keyboard shortcut for launching Windows Terminal
+
+You can install AutoHotKey and use [this script](https://gist.github.com/atruskie/99a498ac43b91deb91eab4069b6047b9) to launch Windows Terminal with Win + \`.
+
 ## Other software used
 
 - [VSCode](https://code.visualstudio.com/) (+ Python, Docker, and Remote extensions)
-- [`gh`](https://github.com/cli/cli), a CLI tool for GitHub
+- [`gh`](https://github.com/cli/cli). A CLI tool for GitHub
+- [`scoop`](https://scoop.sh/). I use scoop to install everything I can.
