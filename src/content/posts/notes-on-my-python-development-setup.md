@@ -61,7 +61,32 @@ For best compatibility with VSCode, at least at time of writing, it's best to co
 poetry config virtualenvs.in-project true
 ```
 
+## Other tweaks
+
+I encountered a few issues that hopefully will be fixed in the future but I'm documenting them here for posterity.
+
+### Lack of network connectivity with WSL2
+
+On my current machine I started off with WSL1 and then later upgraded to WSL2. Upon the update being completed, my DNS did not work, so domain names could not be resolved. See details [here](https://github.com/microsoft/WSL/issues/5336), but what worked for me was editing `/etc/resolv.conf` to specify nameservers:
+
+```
+nameserver 1.1.1.1 1.0.0.1
+```
+
+The above IP addresses corresponds to Cloudflare's DNS resolver, but you can substitute whatever, including corporate DNS servers. The, the distribution from overwriting the change to `/etc/resolv.conf`, I created`/etc.wsl.conf` with the following contents:
+
+```
+[network]
+generateResolvConf = false
+```
+
+I found that somehow my `/etc/resolv.conf` was overwritten anyway, with a link, so I `sudo unlink /etc/resolv.conf` and once again added the nameserver as above, and this time the changes stuck. After closing out of my Windows Terminal window and then opening a new window, DNS resolution worked!
+
+### Setting Windows Terminal to open with Linux home directory
+
+By default Windows Terminal opens WSL to the Windows home directory. To use the Linux home directory instead, I went to the Windows Terminal settings for the WSL profile, and changed the starting directory to `"//wsl$/Ubuntu-20.04/home/radu/"`. See [this issue](https://github.com/microsoft/terminal/issues/2743) for more details.
+
 ## Other software used
 
-- [VSCode](https://code.visualstudio.com/) (+ extensions for Python and Docker)
+- [VSCode](https://code.visualstudio.com/) (+ Python, Docker, and Remote extensions)
 - [`gh`](https://github.com/cli/cli), a CLI tool for GitHub
