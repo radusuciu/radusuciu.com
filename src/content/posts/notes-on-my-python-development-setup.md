@@ -106,7 +106,7 @@ echo "alias dc='sudo docker-compose'" >> ~/.bashrc
 source ~/.bashrc
 ```
 
-## WSL2 absolutely murdering my RAM
+### WSL2 absolutely murdering my RAM
 
 See [this beast of an issue](https://github.com/microsoft/WSL/issues/4166). In the Windows home user directory, create a `.wslconfig` file containing:
 
@@ -118,6 +118,10 @@ localhostForwarding=true
 ```
 
 The last line is unrelated to memory issues and has to do with allowing me to access the container from Windows using `localhost`.
+
+### Accessing WSL2 from Windows Explorer
+
+One benefit of WSL2 over the original is that you can now safely access and manipulate Linux files from Windows. You can see all files by entering 
 
 ## Other software used
 
