@@ -108,7 +108,7 @@ source ~/.bashrc
 
 ## WSL2 absolutely murdering my RAM
 
-In the Windows home user directory, create a `.wslconfig` file containing:
+See [this beast of an issue](https://github.com/microsoft/WSL/issues/4166). In the Windows home user directory, create a `.wslconfig` file containing:
 
 ```
 [wsl2]
