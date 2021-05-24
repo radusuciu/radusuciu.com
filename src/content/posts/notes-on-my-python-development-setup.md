@@ -69,12 +69,16 @@ I encountered a few issues that hopefully will be fixed in the future but I'm do
 
 On my current machine I started off with WSL1 and then later upgraded to WSL2. Upon the update being completed, my DNS did not work, so domain names could not be resolved. See details [here](https://github.com/microsoft/WSL/issues/5336), but what worked for me was editing `/etc/resolv.conf` to specify nameservers:
 
-    nameserver 1.1.1.1 1.0.0.1
+```
+nameserver 1.1.1.1 1.0.0.1
+```
 
 The above IP addresses corresponds to Cloudflare's DNS resolver, but you can substitute whatever, including corporate DNS servers. To prevent my changes to `/etc/resolv.conf` being overwritten, I created`/etc.wsl.conf` with the following contents:
 
-    [network]
-    generateResolvConf = false
+```
+[network]
+generateResolvConf = false
+```
 
 I found that somehow my `/etc/resolv.conf` was overwritten anyway, with a link, so I `sudo unlink /etc/resolv.conf` and once again added the nameserver as above, and this time the changes stuck. After closing out of my Windows Terminal window and then opening a new window, DNS resolution worked!
 
@@ -105,16 +109,18 @@ source ~/.bashrc
 
 See [this beast of an issue](https://github.com/microsoft/WSL/issues/4166). In the Windows home user directory, create a `.wslconfig` file containing:
 
-    [wsl2]
-    memory=4GB
-    swap=0
-    localhostForwarding=true
+```
+[wsl2]
+memory=4GB
+swap=0
+localhostForwarding=true
+```
 
 The last line is unrelated to memory issues and has to do with allowing me to access the container from Windows using `localhost`.
 
 ### Accessing WSL2 from Windows Explorer
 
-One benefit of WSL2 over the original is that you can now safely access and manipulate Linux files from Windows. You can see all files by entering
+One benefit of WSL2 over the original is that you can now safely access and manipulate Linux files from Windows. You can see all files by entering `\\wsl$\` into Windows Explorer -- unless you're like me and for some reason it doesn't work, except on the command line.. in which case maybe this [issue comment](https://github.com/microsoft/WSL/issues/4027#issuecomment-496628274) will help.
 
 ## Other software used
 
