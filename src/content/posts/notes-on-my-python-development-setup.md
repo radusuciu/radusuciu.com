@@ -69,13 +69,13 @@ I encountered a few issues that hopefully will be fixed in the future but I'm do
 
 On my current machine I started off with WSL1 and then later upgraded to WSL2. Upon the update being completed, my DNS did not work, so domain names could not be resolved. See details [here](https://github.com/microsoft/WSL/issues/5336), but what worked for me was editing `/etc/resolv.conf` to specify nameservers:
 
-```
+```bash
 nameserver 1.1.1.1 1.0.0.1
 ```
 
 The above IP addresses corresponds to Cloudflare's DNS resolver, but you can substitute whatever, including corporate DNS servers. To prevent my changes to `/etc/resolv.conf` being overwritten, I created`/etc.wsl.conf` with the following contents:
 
-```
+```bash
 [network]
 generateResolvConf = false
 ```
@@ -109,7 +109,7 @@ source ~/.bashrc
 
 See [this beast of an issue](https://github.com/microsoft/WSL/issues/4166). In the Windows home user directory, create a `.wslconfig` file containing:
 
-```
+```bash
 [wsl2]
 memory=4GB
 swap=0
