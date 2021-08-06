@@ -122,6 +122,32 @@ The last line is unrelated to memory issues and has to do with allowing me to ac
 
 One benefit of WSL2 over the original is that you can now safely access and manipulate Linux files from Windows. You can see all files by entering `\\wsl$\` into Windows Explorer -- unless you're like me and for some reason it doesn't work, except on the command line.. in which case maybe this [issue comment](https://github.com/microsoft/WSL/issues/4027#issuecomment-496628274) will help.
 
+### Using keychain to help with SSH-key-based auth
+
+To setup keychain to start a persisent ssh-agent on login:
+
+```bash
+sudo apt-get install keychain
+echo '/usr/bin/keychain -q --nogui $HOME/.ssh/[key]' >> ~/.bashrc
+echo 'source $HOME/.keychain/$HOSTNAME-sh' >> ~/.bashrc
+```
+
+Oh and while we're on the topic of SSH, here's the config I use:
+
+```bash
+Host [host]
+  User [user]
+  Hostname [hostname]
+  PreferredAuthentications publickey
+  ForwardAgent yes
+  IdentityFile ~/.ssh/[keyfile]
+  TCPKeepAlive yes
+  ServerAliveInterval 15
+  ServerAliveCountMax 3
+```
+
+The last 3 lines helped keep connections alive when interacting with some servers.
+
 ## Other software used
 
 * [VSCode](https://code.visualstudio.com/) (+ Python, Docker, and Remote extensions)
