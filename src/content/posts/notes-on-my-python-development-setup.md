@@ -52,8 +52,11 @@ I've only recently started using [`poetry`](https://python-poetry.org/) but I'm 
 ```bash
 # !!! WARNING !!!
 # You should inspect the contents of this url before piping into python
-curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
-source $HOME/.poetry/env
+curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py | python -
+
+# for completions for bash:
+poetry completions bash > poetry.bash-completion
+sudo mv poetry.bash-completion /etc/bash_completion.d/
 ```
 
 For best compatibility with VSCode, at least at time of writing, it's best to configure it to store virtual environments in the current directory like so:
